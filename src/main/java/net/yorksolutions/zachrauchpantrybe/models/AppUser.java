@@ -12,6 +12,6 @@ public class AppUser {
     public Long userId;
     public String email;
     public String password;
-    public String fName;
-    public String lName;
+    public String fname;
+    public String lname;
 }
