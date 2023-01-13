@@ -16,7 +16,7 @@ public class PantryService {
     }
 
     public Pantry getPantry(Long userId) throws Exception {
-        return pantryRepository.findPantryByUserId(userId).orElseThrow();
+        return pantryRepository.findByUserId(userId).orElseThrow();
     }
 
     public Pantry addPantry(Pantry pantry) {

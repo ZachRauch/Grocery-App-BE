@@ -11,4 +11,6 @@ public interface PantryRepository extends CrudRepository<Pantry, Long> {
     Optional<Pantry> findPantryByUserId(Long userId);
 
     void deletePantryByUserId(Long userId);
+
+    Optional<Pantry> findByUserId(Long userId);
 }

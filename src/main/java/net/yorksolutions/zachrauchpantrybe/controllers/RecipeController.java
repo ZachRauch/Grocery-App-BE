@@ -8,7 +8,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 @CrossOrigin
 @RestController
-@RequestMapping
+@RequestMapping("/recipes")
 public class RecipeController {
 
     RecipeService recipeService;
@@ -18,7 +18,7 @@ public class RecipeController {
     }
 
     @GetMapping
-    public Recipe getRecipes(@RequestParam Long userId) {
+    public Iterable<Recipe> getRecipes(@RequestParam Long userId) {
         try {
             return recipeService.getRecipesByUserId(userId);
         } catch (Exception e) {

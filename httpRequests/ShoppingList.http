@@ -1,4 +1,4 @@
-POST http://localhost:8080/pantry
+POST http://localhost:8080/shopping-lists
 Content-Type: application/json
 
 {

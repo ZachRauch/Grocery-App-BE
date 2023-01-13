@@ -36,9 +36,9 @@ public class AppUserController {
     }
 
     @PutMapping("/{id}")
-    public AppUser updateAppUser(@PathVariable Long id, @RequestBody AppUser appUser, @RequestParam String email, @RequestParam String password) {
+    public AppUser updateAppUser(@PathVariable Long id, @RequestBody AppUser appUser, @RequestParam String email) {
         try {
-            return appUserService.updateAppUser(id, appUser, email, password);
+            return appUserService.updateAppUser(appUser, email);
         } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
         }

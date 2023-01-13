@@ -1,0 +1,20 @@
+POST http://localhost:8080/recipes
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "recipeImage": "https://www.foodnetwork.com/content/dam/images/food/fullset/2014/3/6/0/RF0104_From-Scratch-Pumpkin-Pie_s4x3.jpg",
+  "items": [],
+  "name": "Pumpkin pie"
+}
+###
+PUT http://localhost:8080/recipes/2
+Content-Type: application/json
+
+{
+  "id": 2,
+  "userId": 1,
+  "recipeImage": "https://recipe30.com/wp-content/uploads/2020/11/Apple-pie.jpg",
+  "items": [],
+  "name": "apple pie"
+}

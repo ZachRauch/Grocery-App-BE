@@ -26,9 +26,11 @@ public class AppUserService {
         } else throw new Exception("Cannot delete other Users");
     }
 
-    public AppUser updateAppUser(Long id, AppUser appUser, String email, String password) throws Exception {
-        if (appUserRepository.findAppUserByEmailAndPassword(email, password).orElseThrow().userId.equals(id)
-                && appUserRepository.findByEmail(appUser.email).isEmpty()) {
+    public AppUser updateAppUser(AppUser appUser, String email) throws Exception {
+        if (appUser.email == email) {
+            return appUserRepository.save(appUser);
+        }
+        if (appUserRepository.findByEmail(appUser.email).isEmpty()) {
             return appUserRepository.save(appUser);
         } else throw new Exception("Cannot update User, the email you entered is already associated with an existing account");
     }

@@ -13,8 +13,8 @@ public class RecipeService {
         this.recipeRepository = recipeRepository;
     }
 
-    public Recipe getRecipesByUserId(Long userId) {
-        return recipeRepository.findRecipesByUserId(userId);
+    public Iterable<Recipe> getRecipesByUserId(Long userId) {
+        return recipeRepository.findAllRecipesByUserId(userId);
     }
 
     public Recipe addRecipe(Recipe recipe) {
