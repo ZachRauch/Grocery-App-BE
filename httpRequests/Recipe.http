@@ -8,11 +8,10 @@ Content-Type: application/json
   "name": "Pumpkin pie"
 }
 ###
-PUT http://localhost:8080/recipes/2
+POST http://localhost:8080/recipes
 Content-Type: application/json
 
 {
-  "id": 2,
   "userId": 1,
   "recipeImage": "https://recipe30.com/wp-content/uploads/2020/11/Apple-pie.jpg",
   "items": [],
