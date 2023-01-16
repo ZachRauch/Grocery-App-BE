@@ -10,6 +10,7 @@ Content-Type: application/json
 ###
 POST http://localhost:8080/items
 Content-Type: application/json
+
 {
   "name": "apples",
   "quantity": 3,
