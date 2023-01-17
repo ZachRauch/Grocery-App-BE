@@ -8,7 +8,5 @@ import java.util.Optional;
 
 @Repository
 public interface ItemsRepository extends CrudRepository<Items, Long> {
-    Optional<Items> findByNameAndUserId(String name, Long userId);
 
-    Iterable<Items> findByUserId(Long userId);
 }

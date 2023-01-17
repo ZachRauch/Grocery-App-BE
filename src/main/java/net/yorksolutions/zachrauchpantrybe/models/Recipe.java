@@ -16,6 +16,6 @@ public class Recipe {
 
     public String name;
 
-    @OneToMany
+    @ManyToMany
     public List<Items> items;
 }

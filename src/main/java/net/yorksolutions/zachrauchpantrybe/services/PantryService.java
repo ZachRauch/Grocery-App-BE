@@ -26,7 +26,7 @@ public class PantryService {
     public Pantry updatePantry(Pantry pantry) throws Exception {
         if (pantryRepository.findPantryByUserId(pantry.userId).isEmpty()) throw new Exception();
 
-        final var updatedPantry = pantryRepository.findPantryByUserId(pantry.userId).orElseThrow();
+        var updatedPantry = pantryRepository.findPantryByUserId(pantry.userId).orElseThrow();
         updatedPantry.userId = pantry.userId;
         updatedPantry.items = pantry.items;
 

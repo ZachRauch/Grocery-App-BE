@@ -2,6 +2,9 @@ POST http://localhost:8080/pantry
 Content-Type: application/json
 
 {
-  "userId": 1,
+  "userId": 4,
   "items": []
 }
+###
+PUT http://localhost:8080/pantry/
+Content-Type: application/json

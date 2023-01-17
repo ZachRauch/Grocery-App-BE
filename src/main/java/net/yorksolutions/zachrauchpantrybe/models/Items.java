@@ -13,9 +13,6 @@ public class Items {
 
     public String name;
 
-    public Long quantity;
-
     public String itemImage;
 
-    public Long userId;
 }

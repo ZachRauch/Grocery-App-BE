@@ -44,8 +44,8 @@ public class ItemsController {
         }
     }
 
-    @GetMapping(params = {"userId"})
-    public Iterable<Items> getItems(@RequestParam Long userId) {
-        return this.itemsService.getItemsByUserId(userId);
+    @GetMapping
+    public Iterable<Items> getAllItems() {
+        return this.itemsService.getAllItems();
     }
 }

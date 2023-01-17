@@ -3,9 +3,7 @@ Content-Type: application/json
 
 {
   "name": "butter",
-  "quantity": 4,
-  "itemImage": "https://storcpdkenticomedia.blob.core.windows.net/media/lolretail/media/lolr-media/products/2022_salted_butter_product_800x800.png?ext=.png",
-  "userId": 1
+  "itemImage": "https://storcpdkenticomedia.blob.core.windows.net/media/lolretail/media/lolr-media/products/2022_salted_butter_product_800x800.png?ext=.png"
 }
 ###
 POST http://localhost:8080/items
@@ -13,7 +11,6 @@ Content-Type: application/json
 
 {
   "name": "apples",
-  "quantity": 3,
-  "itemImage": "https://upload.wikimedia.org/wikipedia/commons/0/07/Honeycrisp-Apple.jpg",
-  "userId": 1
+  "itemImage": "https://upload.wikimedia.org/wikipedia/commons/0/07/Honeycrisp-Apple.jpg"
 }
+###

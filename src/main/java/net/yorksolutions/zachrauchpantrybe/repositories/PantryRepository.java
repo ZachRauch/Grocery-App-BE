@@ -4,6 +4,7 @@ import net.yorksolutions.zachrauchpantrybe.models.Pantry;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Collection;
 import java.util.Optional;
 
 @Repository
@@ -13,4 +14,6 @@ public interface PantryRepository extends CrudRepository<Pantry, Long> {
     void deletePantryByUserId(Long userId);
 
     Optional<Pantry> findByUserId(Long userId);
+
+    Optional<Pantry> findPantryById(Long id);
 }

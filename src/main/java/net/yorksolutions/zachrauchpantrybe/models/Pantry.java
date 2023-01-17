@@ -12,6 +12,6 @@ public class Pantry {
 
     public Long userId;
 
-    @OneToMany
+    @ManyToMany
     public List<Items> items;
 }
