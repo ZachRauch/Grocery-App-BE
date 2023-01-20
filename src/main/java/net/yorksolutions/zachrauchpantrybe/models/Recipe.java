@@ -1,7 +1,9 @@
 package net.yorksolutions.zachrauchpantrybe.models;
 
 import jakarta.persistence.*;
+import org.w3c.dom.Text;
 
+import java.sql.Clob;
 import java.util.List;
 
 @Entity
@@ -18,4 +20,7 @@ public class Recipe {
 
     @ManyToMany
     public List<Items> items;
+
+    @Column(length = 10000)
+    public String steps;
 }
