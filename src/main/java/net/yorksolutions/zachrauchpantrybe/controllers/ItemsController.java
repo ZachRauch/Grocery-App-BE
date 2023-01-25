@@ -48,4 +48,5 @@ public class ItemsController {
     public Iterable<Items> getAllItems() {
         return this.itemsService.getAllItems();
     }
+
 }

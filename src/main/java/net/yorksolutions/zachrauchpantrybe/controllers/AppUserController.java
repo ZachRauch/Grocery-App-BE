@@ -26,17 +26,17 @@ public class AppUserController {
         }
     }
 
-    @DeleteMapping("/{id}")
-    public void deleteUser(@PathVariable Long id, @RequestParam String email, @RequestParam String password) {
+    @DeleteMapping
+    public void deleteUser(@RequestParam String email, @RequestParam String password) {
         try {
-            this.appUserService.deleteUser(id, email, password);
+            this.appUserService.deleteUser(email, password);
         } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
         }
     }
 
-    @PutMapping("/{id}")
-    public AppUser updateAppUser(@PathVariable Long id, @RequestBody AppUser appUser, @RequestParam String email) {
+    @PutMapping
+    public AppUser updateAppUser(@RequestParam String email, @RequestBody AppUser appUser) {
         try {
             return appUserService.updateAppUser(appUser, email);
         } catch (Exception e) {

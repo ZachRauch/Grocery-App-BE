@@ -20,14 +20,14 @@ public class AppUserService {
         return this.appUserRepository.save(appUser);
     }
 
-    public void deleteUser(Long id, String email, String password) throws Exception {
-        if (appUserRepository.findAppUserByEmailAndPassword(email, password).orElseThrow().userId.equals(id)) {
-            appUserRepository.deleteById(id);
+    public void deleteUser(String email, String password) throws Exception {
+        if (appUserRepository.findAppUserByEmailAndPassword(email, password).isPresent()) {
+            appUserRepository.deleteById(appUserRepository.findByEmail(email).get().userId);
         } else throw new Exception("Cannot delete other Users");
     }
 
     public AppUser updateAppUser(AppUser appUser, String email) throws Exception {
-        if (appUser.email == email) {
+        if (appUser.email.equals(email)) {
             return appUserRepository.save(appUser);
         }
         if (appUserRepository.findByEmail(appUser.email).isEmpty()) {
